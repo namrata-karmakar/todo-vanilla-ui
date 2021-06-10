@@ -168,8 +168,9 @@ body {
   }
 
   .addTodoBtn {
+    display: block;
     padding: 2vh 2vw;
-    margin: 5vh 40vw 0 40vw;
+    margin: 5vh auto 0 auto;
     font-size: 1.2rem;
   }
   .modal-footer {

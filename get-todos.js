@@ -33,7 +33,6 @@ async function getTodos() {
         "x-token-header": `${sessionStorage.getItem("token")}`,
       },
     });
-
     return response.body;
   } catch (e) {
     const errorMsg = e.message;

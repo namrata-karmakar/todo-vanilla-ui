@@ -50,7 +50,7 @@ function renderTodos(todoArgs) {
 
 async function loginImpl(dataArgs) {
   try {
-    const response = await callFetchWithTextInResponse({
+    const response = await callFetch({
       url: "http://localhost:3012/user/login",
       method: "POST",
       headers: {
@@ -58,8 +58,8 @@ async function loginImpl(dataArgs) {
       },
       body: JSON.stringify(dataArgs),
     });
-    const { body } = response;
-    sessionStorage.setItem("token", body);
+    const { token, userID  } = response.body;
+    sessionStorage.setItem("token", token);
   } catch (e) {
     throw e;
   } finally {

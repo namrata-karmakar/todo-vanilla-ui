@@ -86,7 +86,6 @@ function populateAvailableTodos(todoArgs) {
   deleteModalDomId.addEventListener("show.bs.modal", () => {
     const modalHeaderText = document.getElementById("modalHeaderText").value;
     document.getElementById("modalHeaderZone").innerHTML = modalHeaderText;
-    console.log(modalHeaderText);
   }
   );
 
